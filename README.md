@@ -76,34 +76,34 @@ Create a local directory and link all FASTQ files:
 ```
 mkdir local_reads
 
-RAW_DIR="/media/fmr/Backup Plus/WWS-AMR-NBG(2026)/raw_data"
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0704_R1.fastq.gz local_reads/MT0704_1.fastq.gz
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0704_R2.fastq.gz local_reads/MT0704_2.fastq.gz
 
-for f in "$RAW_DIR"/*.fastq.gz; do
-    ln -s "$f" "local_reads/$(basename "$f")"
-done
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0705_R1.fastq.gz local_reads/MT0705_1.fastq.gz
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0705_R2.fastq.gz local_reads/MT0705_2.fastq.gz
+
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0706_R1.fastq.gz local_reads/MT0706_1.fastq.gz
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0706_R2.fastq.gz local_reads/MT0706_2.fastq.gz
+
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0707_R1.fastq.gz local_reads/MT0707_1.fastq.gz
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0707_R2.fastq.gz local_reads/MT0707_2.fastq.gz
+
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0708_R1.fastq.gz local_reads/MT0708_1.fastq.gz
+ln -s /mnt/myhdd/project/raw_data/MT_2024_0708_R2.fastq.gz local_reads/MT0708_2.fastq.gz
 ```
 
 ### Step 2: Generate `input.json`
-Automatically create input file for all samples:
 ```
-RAW_DIR="/mnt/myssd/PROJECT/raw_data"
+cat > input.json <<EOF
+{
+  "MT0704": { "type": "PAIRED" },
+  "MT0705": { "type": "PAIRED" },
+  "MT0706": { "type": "PAIRED" },
+  "MT0707": { "type": "PAIRED" },
+  "MT0708": { "type": "PAIRED" }
+}
+EOF
 
-echo "{" > input.json
-first=1
-
-for r1 in "$RAW_DIR"/*_R1_001.fastq.gz; do
-    base=$(basename "$r1")
-    sample=$(echo "$base" | cut -d'_' -f1-3)
-
-    if [ $first -eq 0 ]; then
-        echo "," >> input.json
-    fi
-
-    echo "  \"$sample\": { \"type\": \"PAIRED\" }" >> input.json
-    first=0
-done
-
-echo "}" >> input.json
 ```
 
 ### Step 3: Dry Run
