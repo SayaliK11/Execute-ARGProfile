@@ -140,7 +140,7 @@ ARGprofiler produces **four main result directories**:
 ---
 
 ### Notes
-- Sample names are automatically derived from FASTQ filenames (e.g., `MT_2024_704` /`CL_2026_00365`)
+- Sample names are derived from FASTQ filenames (e.g., `MT_2024_704` /`CL_2026_00365`)
 - Ensure consistent pairing (`R1` and `R2`)
 - Uses conda environments internally via `--use-conda`
 
