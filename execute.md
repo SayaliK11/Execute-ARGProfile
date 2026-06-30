@@ -1,4 +1,3 @@
-
 ### Input Requirements
 
 Place your raw Illumina paired-end reads in a directory:
