@@ -9,3 +9,10 @@ For detailed methodology, output interpretation, and theoretical background, ref
 https://github.com/genomicepidemiology/ARGprofiler
 
 ---
+### Overview
+
+This workflow:
+- Organizes raw FASTQ files
+- Generates required input.json
+- Runs ARGprofiler via Snakemake
+- Produces resistance profiling, taxonomic, and QC outputs
