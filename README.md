@@ -1,9 +1,6 @@
 # ARGprofiler Execution 
 
-## This repository documents how to run ARGprofiler locally using paired-end metagenomic reads.
-
-This is execution workflow for ARGprofiler
-
+### This repository documents how to run ARGprofiler locally using paired-end metagenomic reads.
 
 This workflow:
 - Organizes raw FASTQ files 
