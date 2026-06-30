@@ -11,7 +11,8 @@ https://github.com/genomicepidemiology/ARGprofiler
 ---
 
 This workflow:
-- Organizes raw FASTQ files
+- Organizes raw FASTQ files 
 - Generates required input.json
 - Runs ARGprofiler via Snakemake
-- Produces resistance profiling, taxonomic, and QC outputs
+- Produces QC, taxonomic and resistomic outputs like 'trimmed_reads', "kma_mOTUs', 'kma_panres', 
+'argextender', 
