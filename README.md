@@ -4,7 +4,6 @@
 
 This is execution workflow for ARGprofiler
 
--
 
 This workflow:
 - Organizes raw FASTQ files 
