@@ -9,7 +9,6 @@ For detailed methodology, output interpretation, and theoretical background, ref
 https://github.com/genomicepidemiology/ARGprofiler
 
 ---
-### Overview
 
 This workflow:
 - Organizes raw FASTQ files
