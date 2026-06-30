@@ -1,4 +1,4 @@
-### Input Requirements
+### ● Input Requirements
 
 Place your raw Illumina paired-end reads in a directory:
 ```
@@ -16,7 +16,7 @@ Expected naming patters:
 
 ---
 
-### Setup & Installation
+### ● Setup & Installation
 
 Go to project directory
 ```
@@ -104,7 +104,7 @@ snakemake \
 
 ---
 
-### Output Structure
+### ● Output Structure
 
 ARGprofiler produces **four main result directories**:
 
