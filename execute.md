@@ -1,12 +1,4 @@
 
-### Overview
-
-This workflow:
-- Organizes raw FASTQ files
-- Generates required input.json
-- Runs ARGprofiler via Snakemake
-- Produces resistance profiling, taxonomic, and QC outputs
-
 ---
 
 ### Input Requirements
