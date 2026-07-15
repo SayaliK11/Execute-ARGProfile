@@ -134,5 +134,5 @@ Please refer to the official documentation for:
 
 ---
 
-This repository provides a practical execution workflow for running ARGprofiler locally ,not a replacement for the official documentation.
+This repository provides a practical execution workflow for running ARGprofiler locally, and is not a replacement for the official documentation.
 
